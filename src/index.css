@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;500;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +99,29 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+@layer components {
+  .pixel-font {
+    font-family: "Press Start 2P", cursive;
+  }
+
+  .game-container {
+    background: linear-gradient(180deg, #4a90e2 0%, #ffd700 100%);
+    min-height: 100vh;
+  }
+
+  .tram-car {
+    background: linear-gradient(135deg, #ff6b35, #ff6b35);
+    border: 3px solid #000;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+
+  .mario-character {
+    background: #ff6b35;
+    border: 2px solid #000;
+    border-radius: 50%;
   }
 }
