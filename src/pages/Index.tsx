@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import GameEngine from '@/components/GameEngine'
 
 const Index = () => {
   const [currentLevel, setCurrentLevel] = useState(1)
@@ -226,24 +227,7 @@ const Index = () => {
 
           {/* Игра */}
           <TabsContent value="game" className="space-y-6">
-            <Card className="border-4 border-black">
-              <CardHeader className="bg-black text-white">
-                <CardTitle className="pixel-font text-center text-2xl">🎮 ИГРОВОЕ ПОЛЕ</CardTitle>
-                <CardDescription className="text-center text-gray-300">
-                  Уровень {currentLevel} | Очки: {score} | Жизни: {Array(lives).fill('❤️').join('')}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="p-0">
-                <div className="relative bg-gradient-to-b from-sky-400 to-green-400 h-96 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-4xl pixel-font text-white bg-black/70 p-8 rounded-lg border-4 border-white">
-                      🚧 ПОЛНАЯ ВЕРСИЯ СКОРО! 🚧
-                      <div className="text-lg mt-4">Пока попробуй демо выше ⬆️</div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <GameEngine />
           </TabsContent>
 
           {/* Уровни */}
